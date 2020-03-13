@@ -5,7 +5,7 @@ let channels = [
   {name: 'Software Support'}
 ]
 function App() {
-  return (
+  return (  
     <div className="App">
       <ChannelList channels={channels}/>
     </div>
