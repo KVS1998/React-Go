@@ -1,5 +1,5 @@
 import React from 'react';
-import ChannelList from './components/ChannelList.js';
+import ChannelList from './components/Channels/ChannelList.js';
 let channels = [
   {name: 'Hardware Support'},
   {name: 'Software Support'}
