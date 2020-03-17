@@ -10,7 +10,8 @@ class App extends React.Component {
     this.state = {
       channels: [],
       users: [],
-      messages: []
+      messages: [],
+      activeChannel: {}
     };
   }
   
@@ -23,11 +24,20 @@ class App extends React.Component {
   setChannel(activeChannel) {
     this.setState({activeChannel})
   }
+
   setUserName(name){
     let {users} = this.state;
     users.push({id:users.length, name});
     this.setState({users})
   }
+
+  addMessage(body) {
+    let {messages, users}=this.state;
+    let author = users.length>0?users[users.length-1].name:'anonymous';
+    messages.push({id:messages.length,body,author});
+    this.setState({messages});
+  }
+
   render() {
     return (
       <div className='app'>
@@ -40,7 +50,9 @@ class App extends React.Component {
             {...this.state}
             setUserName={this.setUserName.bind(this)}/>
         </div>
-        {/*<MessageSection /> */}
+        <MessageSection 
+          {...this.state}
+          addMessage={this.addMessage.bind(this)}/> 
       </div> 
     )
   }
