@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import UserForm from './UserForm.jsx'
-import UserList from './UserList.jsx'
-
+import UserForm from './UserForm.js'
+import UserList from './UserList.js'
+import PropTypes from 'prop-types'
 class UserSection extends Component {
 
   render() {
@@ -21,8 +21,8 @@ class UserSection extends Component {
 }
 
 UserSection.propTypes = {
-  users: React.PropTypes.array.isRequired,
-  setUserName: React.PropTypes.func.isRequired
+  users: PropTypes.array.isRequired,
+  setUserName: PropTypes.func.isRequired
 }
 
 export default UserSection

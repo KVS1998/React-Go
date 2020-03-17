@@ -1,5 +1,6 @@
   
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class UserForm extends Component {
 
@@ -29,7 +30,7 @@ class UserForm extends Component {
 }
 
 UserForm.propTypes = {
-  setUserName: React.PropTypes.func.isRequired
+  setUserName: PropTypes.func.isRequired
 }
 
 export default UserForm

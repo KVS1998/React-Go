@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class ChannelForm extends React.Component {
     onSubmit(e) {
@@ -20,5 +21,5 @@ export default class ChannelForm extends React.Component {
     }
 }
 ChannelForm.propTypes = {
-    addChannel: React.PropTypes.func.isRequired
+    addChannel: PropTypes.func.isRequired
 }
